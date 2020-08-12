@@ -1,0 +1,635 @@
+body{
+	margin:0;
+	color:#6a6f8c;
+	background:#c8c8c8;
+	font:600 16px/18px 'Open Sans',sans-serif;
+}
+*,:after,:before{box-sizing:border-box}
+.clearfix:after,.clearfix:before{content:'';display:table}
+.clearfix:after{clear:both;display:block}
+a{color:inherit;text-decoration:none}
+
+.login-header{
+	width:100%;
+	margin:auto;
+	max-width:525px;
+	min-height:60px;
+	position:relative;
+	text-align: center;
+	background:url('../images/header.jpg') no-repeat center;
+	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+	
+}
+
+.body-wrapper {
+	text-align: center;
+	margin: 0 auto;
+	width: 50%;
+	min-width: 525px;
+	height: 100%;
+	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
+
+.list-header{
+	width:100%;
+	margin:auto;
+	min-width: 525px;
+	min-height: 20px;
+	position:relative;	
+	background:url('../images/header.jpg') no-repeat center;
+	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
+
+.login-header-label{
+	font-size: 17px;
+	/*height: 38px;*/
+	color: rgba(107, 252, 208, 0.89);
+	text-align: center;
+	padding-top: 10px;
+	font-family: "Merienda";
+
+}
+
+.logged-user-info {
+	width :100%;
+	height: 22px;
+	float: none;
+}
+
+.logedInTag {
+	text-align: right;
+	color: rgb(5, 177, 177);
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 12px;
+	padding-right: 20px;
+}
+
+#grad3 {
+  height: 100px;
+  background-color: magenta; /* For browsers that do not support gradients */
+  background-image: linear-gradient(180deg, blue, turquoise); /* Standard syntax (must be last) */
+}
+
+.login-wrap{
+	width:100%;
+	margin:auto;
+	max-width:525px;
+	min-height:700px;
+	position:relative;
+	/*background:url(https://raw.githubusercontent.com/khadkamhn/day-01-login-form/master/img/bg.jpg) no-repeat center;*/
+	background:url(https://files.prokerala.com/news/photos/imgs/1024/passengers-at-the-sealdah-railway-station-in-846364.jpg) no-repeat center;
+	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
+.login-html{
+	width:100%;
+	height:100%;
+	position:absolute;
+	padding:90px 70px 50px 70px;
+	background:rgba(40,57,101,.9);
+}
+.login-html .sign-in-htm,
+.login-html .sign-up-htm{
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	position:absolute;
+	transform:rotateY(180deg);
+	backface-visibility:hidden;
+	transition:all .4s linear;
+}
+.login-html .sign-in,
+.login-html .sign-up,
+.login-form .group .check{
+	display:none;
+}
+.login-html .tab,
+.login-form .group .label,
+.login-form .group .button{
+	text-transform:uppercase;
+}
+
+.bottomright {
+  position: absolute;
+  top: 90px;
+  left: 60px;
+  font-size: 25px;
+  color: white;
+}
+
+.login-html .tab{
+	font-size:22px;
+	margin-right:15px;
+	padding-bottom:5px;
+	margin:0 15px 10px 0;
+	display:inline-block;
+	border-bottom:2px solid transparent;
+}
+.login-html .sign-in:checked + .tab,
+.login-html .sign-up:checked + .tab{
+	color:#fff;
+	border-color:#1161ee;
+}
+.login-form{
+	min-height:345px;
+	position:relative;
+	perspective:1000px;
+	transform-style:preserve-3d;
+}
+.login-form .group{
+	margin-bottom:15px;
+}
+.login-form .group .label,
+.login-form .group .input,
+.login-form .group .button{
+	width:100%;
+	color:#fff;
+	display:block;
+}
+.login-form .group .input,
+.login-form .group .button{
+	border:none;
+	padding:15px 20px;
+	border-radius:25px;
+	background:rgba(255,255,255,.1);
+}
+.login-form .group input[data-type="password"]{
+	text-security:circle;
+	-webkit-text-security:circle;
+}
+.login-form .group .label{
+	color:#aaa;
+	font-size:12px;
+}
+.login-form .group .button{
+	background:#1161ee;
+}
+.login-form .group label .icon{
+	width:15px;
+	height:15px;
+	border-radius:2px;
+	position:relative;
+	display:inline-block;
+	background:rgba(255,255,255,.1);
+}
+.login-form .group label .icon:before,
+.login-form .group label .icon:after{
+	content:'';
+	width:10px;
+	height:2px;
+	background:#fff;
+	position:absolute;
+	transition:all .2s ease-in-out 0s;
+}
+.login-form .group label .icon:before{
+	left:3px;
+	width:5px;
+	bottom:6px;
+	transform:scale(0) rotate(0);
+}
+.login-form .group label .icon:after{
+	top:6px;
+	right:0;
+	transform:scale(0) rotate(0);
+}
+.login-form .group .check:checked + label{
+	color:#fff;
+}
+.login-form .group .check:checked + label .icon{
+	background:#1161ee;
+}
+.login-form .group .check:checked + label .icon:before{
+	transform:scale(1) rotate(45deg);
+}
+.login-form .group .check:checked + label .icon:after{
+	transform:scale(1) rotate(-45deg);
+}
+.login-html .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-htm{
+	transform:rotate(0);
+}
+.login-html .sign-up:checked + .tab + .login-form .sign-up-htm{
+	transform:rotate(0);
+}
+
+.hr{
+	height:2px;
+	margin:60px 0 50px 0;
+	background:rgba(255,255,255,.2);
+}
+.foot-lnk {
+	text-align:center;
+}
+
+.foot-link-member {
+	text-align:center;
+}
+
+.foot-link-member:hover {
+	text-align:center;
+	color: rgb(18, 114, 211);
+}
+
+.input-dropdown {
+	width:100%;
+	border:none;
+	padding:15px 20px;
+	border-radius:25px;
+	display:block;
+	color: #fff;
+	background:rgba(255,255,255,.1);
+}
+
+.input-option {
+	color: black;
+}
+
+body {
+	background-color:#fff;
+}
+html, body {
+	height: 100%;
+}
+
+/* adding button hover function for submit buttons */
+
+.button-sign {
+	text-transform:uppercase;
+	width:100%;
+	color:#fff;
+	display:block;
+	border:none;
+	padding:15px 20px;
+	border-radius:25px;
+	background:#1161ee;
+	text-align: center;
+	transition: all 0.5s;
+	cursor: pointer;
+	margin: 5px;
+  }
+  
+  .button-refresh {
+	text-transform:uppercase;
+	width:100%;
+	color:#fff;
+	display:block;
+	border:none;
+	padding:10px 10px;
+	border-radius:25px;
+	background:#1161ee;
+	text-align: center;
+	transition: all 0.5s;
+	cursor: pointer;
+	margin-bottom: 5px;
+	
+  }
+
+
+  .button-sign span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+  }
+  
+  .button-sign span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+  }
+  
+  .button-sign:hover span {
+	padding-right: 25px;
+  }
+  
+  .button-sign:hover span:after {
+	opacity: 1;
+	right: 0;
+  }
+
+  /* CSS Specific to listEmployees() */
+  .head-responsive-wrap {
+	width: 100%;
+	min-height: 200px;
+	height: 15%;
+  }
+
+  .responsive-head-left {
+	width: 50%;
+	float: left;
+	min-width: 262px;
+  }
+
+  .responsive-head-right {
+	width: 50%;
+	float: left;
+	min-width: 262px;
+  }
+
+  .staff-pos-head  {
+	padding: 10px;
+	background-image: linear-gradient(0deg, rgb(3, 180, 142), rgb(1, 66, 55));
+	height: 65px;
+  }
+
+  .responsive-fliter {
+	padding: 10px;
+	min-width: 262px;
+	height: 65px;
+	background-image: linear-gradient(0deg, rgb(10, 109, 238), rgb(3, 5, 126))
+  }
+
+  .responsive-filter-detail {
+	padding: 5px;
+	min-height: 155px;
+	min-width: 262px;
+	background-image: linear-gradient(0deg, rgb(3, 129, 119), rgb(3, 80, 104));
+  }
+
+.filter2-checkbox {
+	color: rgb(230, 247, 253);
+	font-size: 12px;
+	padding-left: 10px;
+}
+
+.choice-ti-unit {
+	width: 100%;
+	
+	text-align: left;
+	float: none;
+	background-color: rgb(3, 129, 119);
+}
+
+.fliter-bg {
+	width: 100%;
+	background-image: linear-gradient(180deg, rgb(3, 129, 119), rgb(3, 80, 104));
+}
+
+.filter-by-name-stn {
+	width: 100%;
+	background-color: rgb(3, 129, 119)
+}
+
+.ti-unit-label {
+	text-align: left;
+}
+
+.ti-units{
+	min-height: 40px;
+}
+
+.filter-header  {
+	  text-align: center;
+	  color: rgb(127, 227, 252);
+	  font-size: 15px;
+	  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .filter-body  {
+	text-align: center;
+	color: rgb(90, 215, 253);
+	font-size: 13;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+table.fixed-table {
+	table-layout:fixed;
+	border-collapse: separate;
+    border-spacing: 0 9x;
+}
+
+table.fixed-table td {
+	overflow: hidden;	
+}
+
+.staff-pos-table, .res-filter-table, .ti-unit-table {
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 0 9x;
+	white-space: nowrap;
+}
+
+.filter-name-stn-tab {
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 0 9x;
+	white-space: nowrap;
+}
+
+.staff-pos-tab-lbl {
+	padding-left: 5px;
+	padding-bottom: 10px;
+	color: rgb(230, 247, 253);
+	font-size: 14px;
+	text-align: left;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.filter-pos-tab-lbl {
+	padding-left: 30px;
+	color: rgb(230, 247, 253);
+	font-size: 14px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	text-align: justify;
+}
+
+.staff-pos-tab-data {
+	padding-left: 10px;
+	padding-right: 10px;
+	color: rgb(230, 247, 253);
+	font-size: 14px;
+	background-color:#000;
+	border-radius:20px;
+	text-align: center;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.staff-pos-detail {
+	min-height: 155px;
+	background-image: linear-gradient(0deg, rgb(3, 129, 119), rgb(3, 80, 104));
+}
+
+.input-filter-box {
+	border-radius: 5px;
+	font-weight: bold;
+	width: 90%;
+	height: 30px;
+}
+
+table.list-fixed-table {
+	table-layout:fixed;
+	border-collapse: separate;
+    border-spacing: 0 9x;
+}
+
+/*list employee table style */
+.list-emp-data {
+	width:100%;
+	min-height: 400px;
+	max-height: 450px;
+	Color: rgb(160, 158, 158);
+	background-color: rgb(230, 247, 253);
+	overflow: scroll;
+}
+
+#listEmployee {
+	border-collapse: separate;
+	border-spacing: 0 9x;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	font-size: 11px;
+	width: 100%;
+	white-space: nowrap;
+  }
+  
+  #listEmployee td, #listEmployee th {
+	border-top: 0px;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	padding: 1px;
+  }
+  
+  #listEmployee tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #listEmployee tr:hover {background-color: #ddd;}
+  
+  #listEmployee th {
+	padding-top: 8px;
+	padding-bottom: 8px;
+	text-align: left;
+	position: sticky;
+	top: 0;
+	background-image: linear-gradient(0deg, rgb(98, 165, 252), rgb(1, 72, 100));
+	color: white;
+	color:rgb(249, 250, 195);
+  }
+
+  .list-emp-sticky-action {
+	 
+	  width: 100px;
+	  padding-top: 7px;
+	  padding-bottom: 7px;
+  }
+
+  #listEmployee td {
+	padding-top: 2px;
+	padding-bottom: 2px;
+	text-align: left;
+	font-size: 12px;
+	color: #000;
+	overflow: hidden;
+  }
+
+  .dynamicUpdateFields {
+	padding-top: 6px;
+	padding-bottom: 4px;
+	text-align: left;
+	font-size: 12px;
+	font-weight: bold;
+	color: #000;
+	padding-left: 0;
+  }
+
+
+  .list-page-scroll {
+	width:100%;
+	background-color: rgb(230, 247, 253);
+	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+	text-align: center;
+}
+
+.list-footer{
+	width:100%;
+	min-height: 30px;
+	
+	padding-top: 5px;
+	position: sticky;
+	padding-bottom: 5px;
+	background:url('../images/header.jpg') no-repeat center;
+	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
+
+.scroll-button {
+	background-image: linear-gradient(0deg, rgb(107, 107, 107), rgb(34, 35, 36));
+	padding: 10px;
+	color: #fff;
+	border-radius: 20px;
+	
+}
+
+.scroll-button:hover {
+	opacity: 0.9;
+}
+
+.scroll-update {
+	background-image: linear-gradient(0deg, rgb(5, 207, 174), rgb(2, 148, 9));
+	padding: 5px;
+	color: #fff;
+	border-radius: 20px;
+	width:50px;
+}
+
+.scroll-update:hover {
+	opacity: 0.8;
+}
+
+.scroll-add {
+	background-image: linear-gradient(0deg, rgb(5, 207, 174), rgb(2, 148, 9));
+	padding: 5px;
+	color: #fff;
+	border-radius: 20px;
+	width:50px;
+}
+
+.scroll-add:hover {
+	opacity: 0.8;
+}
+
+.scroll-delete {
+	background-image: linear-gradient(0deg, rgb(238, 23, 87), rgb(148, 2, 63));
+	padding: 5px;
+	color: #fff;
+	border-radius: 20px;
+	width: 50px;
+}
+
+#listEmpActionTab td tr {
+	border: none;
+	margin: 0px;
+}
+
+.scroll-delete:hover {
+	opacity: 0.8;
+}
+
+.scroll-add-del {
+	background-image: linear-gradient(0deg, rgb(238, 23, 87), rgb(148, 2, 63));
+	padding: 5px;
+	color: #fff;
+	border-radius: 20px;
+	width: 50px;
+}
+
+.scroll-add-del:hover {
+	opacity: 0.8;
+}
+
+.logoutTag {
+	text-align: right;
+	padding-right: 30px;
+	color: rgb(245, 24, 24);
+	background-color: #1161ee;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 12px;
+}
+
+.dummy-class-tr {
+	
+}
+
+.dummy-class-id {
+	
+}
